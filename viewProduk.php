@@ -7,8 +7,70 @@
     <title>Stok Produk</title>
 </head>
 <body>
-    
-    <h1>Data Customer</h1>
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            text-align: center;
+            color: #333;
+        }
+        input[type="text"], input[type="email"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+    <div class="container">
+    <h1 align="center">Data Customer</h1>
 
     <form method="POST" action="">
     <label for="nama">Nama barang : </label>
@@ -31,13 +93,13 @@
 
         <input type="submit" value="Hitung Stok Akhir">
     </form>
-
+    </div>
     <?php if ($namaProduk !== null):?>
-        <h2>Nama barang : <?php echo $namaProduk; ?></h2>
+        <h2 align="center">Nama barang : <?php echo $namaProduk; ?></h2>
     <?php endif;?>
 
     <?php if ($Stokakhir !== null):?>
-        <h2>Stok Akhir : <?php echo $Stokakhir; ?></h2>
+        <h2 align="center">Stok Akhir : <?php echo $Stokakhir; ?></h2>
     <?php endif;?>
 
 </body>
